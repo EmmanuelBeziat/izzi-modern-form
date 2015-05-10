@@ -18,7 +18,6 @@ $('.form').modernForm();
 		<tr>
 			<th>Option</th>
 			<th>Valeur par défaut</th>
-			<th>Valeurs possibles</th>
 			<th>Description</th>
 		</tr>
 	</thead>
@@ -26,7 +25,6 @@ $('.form').modernForm();
 		<tr>
 			<th>inputSelector</th>
 			<td>.form-input</td>
-			<td>Sélecteur jQuery</td>
 			<td>Choisi l'élément sur lequel les classes seront appliquées.</td>
 		</tr>
 		<tr>
