@@ -10,16 +10,39 @@
 
 	$.fn.modernForm = function(params) {
 
-		// Variables globales
-
 		// Valeurs par défauts des options
 		params = $.extend({
-
+			inputSelector: '.form-input',
+			classFocus: 'form-group--focus',
+			classLabel: 'form-group--label'
 		}, params);
 
 		// Actions du plugin
 		this.each(function() {
-			// C'est parti
+
+			// Variables
+			var $form = $(this),
+				$input = $(this).find(params.inputSelector);
+
+			$input
+				.on('focus', function() {
+					$(this).parent().addClass(params.classeFocus + ' ' + params.classeLabel);
+				})
+				.on('blur', function() {
+					var $parent = $(this).parent();
+
+					if ($(this).val() === '') {
+						$parent.removeClass(params.classeLabel);
+					}
+
+					$parent.removeClass(params.classeFocus);
+				});
+
+			$input.each(function() {
+				if ($(this).val() !== '') {
+					$(this).parent().addClass(classeLabel);
+				}
+			});
 		});
 
 		// Chainage jQuery

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>jQuery Modern Form</title>
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+
+		<div class="demo">
+			<form action="" class="form">
+				<div class="form-group">
+					<label for="input-name" class="form-label">Input</label>
+					<input type="text" class="form-input" id="input-name">
+				</div>
+
+				<div class="form-group">
+					<label for="input-content" class="form-label">Input</label>
+					<input type="text" class="form-input" id="input-content">
+				</div>
+			</form>
+		</div>
+
+		<script src="js/jquery-1.11.3.min.js"></script>
+		<script src="../dist/main.min.js"></script>
+		<script>
+			$(function() {
+				$('form').modernForm();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "jquery-modern-form",
+  "version": "1.0.0",
+  "description": "A simple handler for forms that add classes on your forms, so you can play with CSS.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EmmanuelBeziat/jquery-modern-form.git"
+  },
+  "keywords": [
+    "jquery",
+    "form",
+    "css3"
+  ],
+  "author": "EmmanuelBeziat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmmanuelBeziat/jquery-modern-form/issues"
+  },
+  "homepage": "https://github.com/EmmanuelBeziat/jquery-modern-form",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4"
+  }
+}
