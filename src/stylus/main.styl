@@ -1,2 +1,58 @@
+/**
+ * Mixins
+ */
+clearfix()
+	&:before
+	&:after
+		content ""
+		display table
+
+	&:after
+		clear both
+
+transform(valeur)
+	-webkit-transform valeur
+	-ms-transform valeur
+	transform valeur
+
+/**
+ * Variables
+ **/
+colorText = #eaeef3
+colorBackground = #4a4c55
+colorHighlight = #3388c4
+
+/**
+ * Base
+ */
 body
 	margin 0
+	background colorBackground
+	font 400 16px/1.5em "Segoe UI", "Helvetica Neue", Roboto, Arial, sans-serif
+
+button
+input
+select
+textarea
+	box-sizing border-box
+	font-size 100%
+	margin 0
+	max-width 100%
+	vertical-align baseline
+	padding 5px
+	border 0
+	background transparent
+	transition all .4s ease
+	color colorText
+	cursor text
+
+input:focus
+textarea:focus
+	outline 0
+	box-shadow none
+
+.demo
+	margin 40px auto
+	width 480px
+
+@require 'exemple1.styl'

@@ -9,7 +9,8 @@ var gulp = require('gulp');
 	uglify = require('gulp-uglify'),
 	jshint = require('gulp-jshint'),
 	stylus = require('gulp-stylus'),
-	jshint = require('gulp-jshing');
+	jshint = require('gulp-jshint'),
+	stylish = require('jshint-stylish');
 
 /**
  * Chemins
@@ -37,6 +38,15 @@ gulp.task('stylus', function() {
 });
 
 /**
+ * Linter JS
+ */
+gulp.task('jshint', function() {
+	return gulp.src(pathJS + '/*.js')
+		.pipe(jshint())
+		.pipe(jshint.reporter(stylish));
+});
+
+/**
  * Sauvegarde et compresse les fichiers JS dans un fichier minifié
  * Crée un fichier sourcemap
  **/
@@ -45,13 +55,13 @@ gulp.task('javascript', function() {
 		.pipe(sourcemaps.init())
 			.pipe(uglify({
 				preserveComments: 'some'
-			}).on('error', gutil.log))
+			}))
 			.pipe(rename('main.min.js'))
 		.pipe(sourcemaps.write('../dist'))
 		.pipe(gulp.dest(pathDist));
 });
 
-gulp.task('default', ['stylus', 'javascript'], function() {
+gulp.task('default', ['stylus', 'jshint', 'javascript'], function() {
 });
 
 gulp.task('watch', function() {

@@ -21,26 +21,25 @@
 		this.each(function() {
 
 			// Variables
-			var $form = $(this),
-				$input = $(this).find(params.inputSelector);
+			var $input = $(this).find(params.inputSelector);
 
 			$input
 				.on('focus', function() {
-					$(this).parent().addClass(params.classeFocus + ' ' + params.classeLabel);
+					$(this).parent().addClass(params.classFocus + ' ' + params.classLabel);
 				})
 				.on('blur', function() {
 					var $parent = $(this).parent();
 
 					if ($(this).val() === '') {
-						$parent.removeClass(params.classeLabel);
+						$parent.removeClass(params.classLabel);
 					}
 
-					$parent.removeClass(params.classeFocus);
+					$parent.removeClass(params.classFocus);
 				});
 
 			$input.each(function() {
 				if ($(this).val() !== '') {
-					$(this).parent().addClass(classeLabel);
+					$(this).parent().addClass(params.classLabel);
 				}
 			});
 		});
