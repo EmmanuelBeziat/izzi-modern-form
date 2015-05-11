@@ -1,7 +1,7 @@
 /**
  * Dépendances gulp
  */
-var gulp = require('gulp');
+var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	sourcemaps = require('gulp-sourcemaps'),
 	rename = require('gulp-rename'),
@@ -9,7 +9,6 @@ var gulp = require('gulp');
 	uglify = require('gulp-uglify'),
 	jshint = require('gulp-jshint'),
 	stylus = require('gulp-stylus'),
-	jshint = require('gulp-jshint'),
 	stylish = require('jshint-stylish');
 
 /**
