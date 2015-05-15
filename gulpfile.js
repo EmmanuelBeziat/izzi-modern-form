@@ -55,7 +55,7 @@ gulp.task('javascript', function() {
 			.pipe(uglify({
 				preserveComments: 'some'
 			}))
-			.pipe(rename('main.min.js'))
+			.pipe(rename('jquery-modern-form.min.js'))
 		.pipe(sourcemaps.write('../dist'))
 		.pipe(gulp.dest(pathDist));
 });
