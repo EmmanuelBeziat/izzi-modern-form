@@ -44,12 +44,12 @@
 
 			$input
 				.on({
-					'focus': function() {
-						plugin.focusInput();
+					'focus': function(event) {
+						plugin.focusInput(event);
 					},
 
-					'blur': function() {
-						plugin.blurInput();
+					'blur': function(event) {
+						plugin.blurInput(event);
 					}
 				})
 				.each(function() {
@@ -62,14 +62,14 @@
 		/**
 		 * When an item get the focus
 		 */
-		focusInput: function() {
+		focusInput: function(event) {
 			$(event.target).parent().addClass(this.settings.classFocus + ' ' + this.settings.classLabel);
 		},
 
 		/**
 		 * When an item lose the focus
 		 */
-		blurInput: function() {
+		blurInput: function(event) {
 			var $parent = $(event.target).parent();
 
 			if ($(event.target).val() === '') {
