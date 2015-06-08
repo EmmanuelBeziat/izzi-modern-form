@@ -45,11 +45,11 @@
 			$input
 				.on({
 					'focus': function(event) {
-						plugin.focusInput(event);
+						plugin.focusInput($(event.target));
 					},
 
 					'blur': function(event) {
-						plugin.blurInput(event);
+						plugin.blurInput($(event.target));
 					}
 				})
 				.each(function() {
@@ -62,17 +62,17 @@
 		/**
 		 * When an item get the focus
 		 */
-		focusInput: function(event) {
-			$(event.target).parent().addClass(this.settings.classFocus + ' ' + this.settings.classLabel);
+		focusInput: function($target) {
+			$target.parent().addClass(this.settings.classFocus + ' ' + this.settings.classLabel);
 		},
 
 		/**
 		 * When an item lose the focus
 		 */
-		blurInput: function(event) {
-			var $parent = $(event.target).parent();
+		blurInput: function($target) {
+			var $parent = $target.parent();
 
-			if ($(event.target).val() === '') {
+			if ($target.val() === '') {
 				$parent.removeClass(this.settings.classLabel);
 			}
 
@@ -85,11 +85,12 @@
 	 */
 	$.fn[pluginName] = function(options) {
 
-		return this.each(function() {
-			if (!$.data(this, 'plugin_' + pluginName)) {
-				$.data(this, 'plugin_' + pluginName, new Plugin(this, options));
-			}
-		});
+		var _oPlugin;
+
+		if ( $.data( this, 'plugin_' + pluginName ) !== true ) {
+			_oPlugin = new Plugin( this, options );
+			$.data( this, 'plugin_' + pluginName, true );
+		}
 
 	};
 })(jQuery, window, document);

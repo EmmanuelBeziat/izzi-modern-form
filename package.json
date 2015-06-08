@@ -22,15 +22,15 @@
   },
   "homepage": "https://github.com/EmmanuelBeziat/jquery-modern-form",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.2.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-jshint": "^1.10.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-stylus": "^2.0.1",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.4",
-    "jshint-stylish": "^1.0.2"
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-concat": "*",
+    "gulp-jshint": "*",
+    "gulp-rename": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "jshint-stylish": "*"
   }
 }
