@@ -6,6 +6,16 @@ Un simple gestionnaire de formulaires qui ajoute des classes sur les éléments,
 
 A simple handler for forms that add classes on your form elements, so you can play with CSS.
 
+#Installation
+
+Si vous utilisez Bower, vous pouvez l'installer directement
+
+```bash
+$ bower install jquery-modern-form
+```
+
+Sinon, il vous suffit de récupérer manuellement les fichiers sur github.
+
 # Utilisation
 
 ```javascript
