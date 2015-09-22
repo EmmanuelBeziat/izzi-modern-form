@@ -30,7 +30,7 @@
     "tests",
     "demo",
     "src",
-    "gulpfile.js",
+    "gulpfile.js"
   ],
   "dependencies": {
      "jquery": "~1.11.2"
