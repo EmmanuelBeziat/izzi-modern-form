@@ -26,6 +26,7 @@
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
     "gulp-jshint": "*",
+    "gulp-plumber": "^1.0.1",
     "gulp-rename": "*",
     "gulp-sourcemaps": "*",
     "gulp-stylus": "*",
