@@ -1,6 +1,6 @@
 {
   "name": "jquery-modern-form",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "description": "A simple handler for forms that add classes on your forms, so you can play with CSS.",
   "main": "gulpfile.js",
   "scripts": {

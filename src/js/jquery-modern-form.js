@@ -1,46 +1,62 @@
 /*!
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
- * Version : 2.0
+ * Version : 3.0
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/jquery-modern-form
  **/
 
+
 ;(function($, window, document, undefined) {
 	'use strict';
 
-	/**
-	 * Default values
-	 */
-	var pluginName = 'modernForm',
-		defaults = {
-			inputSelector: '.form-input',
-			classFocus: 'form-group--focus',
-			classLabel: 'form-group--label'
-		};
+	var pluginName = 'modernForm';
 
 	/**
 	 * Constructor
 	 */
-	var Plugin = function(element, options) {
+	function Plugin(element, options) {
 		this.element = element;
-
-		this.settings = $.extend({}, defaults, options);
-
-		this._defaults = defaults;
 		this._name = pluginName;
+		this._defaults = $.fn[pluginName].defaults;
+		this.options = $.extend( {}, this._defaults, options );
 
 		this.init();
-	};
+	}
 
 	/**
 	 * Methods
 	 */
 	$.extend(Plugin.prototype, {
 
+		// Initialization logic
 		init: function() {
+			this.buildCache();
+			this.bindEvents();
+		},
+
+		/**
+		 * Remove plugin instance
+		 * Example: $('selector').data('tabs').destroy();
+		 */
+		destroy: function() {
+			this.unbindEvents();
+			this.$element.removeData();
+		},
+
+		/**
+		 * Create variables that can be accessed by other functions
+		 * Useful for DOM performances
+		 */
+		buildCache: function() {
+			this.$element = $(this.element);
+		},
+
+		/**
+		 * Attach actions to events
+		 */
+		bindEvents: function() {
 			var plugin = this,
-				settings = plugin.settings,
-				$input = $(plugin.element).find(settings.inputSelector);
+				$input = $(plugin.$element).find(plugin.options.inputSelector);
 
 			$input
 				.on({
@@ -54,16 +70,23 @@
 				})
 				.each(function() {
 					if ($(this).val() !== '') {
-						$(this).parent().addClass(settings.classLabel);
+						$(this).parent().addClass(plugin.options.classLabel);
 					}
 				});
+		},
+
+		/**
+		 * Remove actions from events
+		 */
+		unbindEvents: function() {
+			this.$element.off('.' + this._name);
 		},
 
 		/**
 		 * When an item get the focus
 		 */
 		focusInput: function($target) {
-			$target.parent().addClass(this.settings.classFocus + ' ' + this.settings.classLabel);
+			$target.parent().addClass(this.options.classFocus + ' ' + this.options.classLabel);
 		},
 
 		/**
@@ -73,24 +96,33 @@
 			var $parent = $target.parent();
 
 			if ($target.val() === '') {
-				$parent.removeClass(this.settings.classLabel);
+				$parent.removeClass(this.options.classLabel);
 			}
 
-			$parent.removeClass(this.settings.classFocus);
+			$parent.removeClass(this.options.classFocus);
 		}
+
 	});
 
 	/**
 	 * jQuery plugin wrapper
 	 */
 	$.fn[pluginName] = function(options) {
-
-		var _oPlugin;
-
-		if ( $.data( this, 'plugin_' + pluginName ) !== true ) {
-			_oPlugin = new Plugin( this, options );
-			$.data( this, 'plugin_' + pluginName, true );
-		}
-
+		this.each(function() {
+			if (!$.data( this, "plugin_" + pluginName)) {
+				$.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
+			}
+		});
+		return this;
 	};
-})(jQuery, window, document);
+
+	/**
+	 * Plugin options and their default values
+	 */
+	$.fn[pluginName].defaults = {
+		inputSelector: '.form-input',
+		classFocus: 'form-group--focus',
+		classLabel: 'form-group--label'
+	};
+
+})( jQuery, window, document );
