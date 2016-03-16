@@ -2,6 +2,9 @@
 
 Un simple gestionnaire de formulaires qui ajoute des classes sur les éléments, pour que vous puissiez jouer avec en CSS.
 
+![version](https://img.shields.io/badge/version-3.0.0-orange.svg?style=flat-square) ![madewith](https://img.shields.io/badge/made%20with-jquery-brightgreen.svg?style=flat-square)
+
+
 ---
 
 A simple handler for forms that add classes on your form elements, so you can play with CSS.
