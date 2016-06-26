@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-4.0.0-orange.svg?style=flat-square)
+![version](https://img.shields.io/badge/version-1.0.0-orange.svg?style=flat-square)
 
 # Modern Form
 
@@ -73,4 +73,4 @@ modernForm.init(myForm);
 </table>
 
 # Todo
-* ??
+* Fire events callback when focus or blur happen
