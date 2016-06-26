@@ -6,28 +6,48 @@ A simple handler for forms that add classes on your form elements, so you can pl
 
 ---
 
-#Installation
+#Install
 
-Si vous utilisez Bower, vous pouvez l'installer directement
+Using `npm` command, it’s as simple as this :
+```bash
+npm i -D modern-form
+```
+
+If you use bower, you can just do
 
 ```bash
-$ bower install modern-form
+$ bower i modern-form
 ```
 
-Sinon, il vous suffit de récupérer manuellement les fichiers sur github.
+Or you could just download the files on GitHub.
 
-# Utilisation
+# How to use
 
 ```javascript
-var myForm = new ModernForm();
+var modernForm = new ModernForm();
+modernForm.init(myForm);
 ```
 
+All you need is to define `myForm` as the main container for all a set of inputs. Check the demo files for an example.
+
 # Options
+
+You can also pass options to the plugin to change it’s default settings, like this:
+
+```javascript
+var modernForm = new ModernForm({
+	inputSelector: '.input',
+	classHasFocus: '.has-focus'
+});
+modernForm.init(myForm);
+```
+
 <table>
 	<thead>
 		<tr>
 			<th>Option</th>
-			<th>Valeur par défaut</th>
+			<th>Default value</th>
+			<th>Type</th>
 			<th>Description</th>
 		</tr>
 	</thead>
@@ -35,20 +55,22 @@ var myForm = new ModernForm();
 		<tr>
 			<th>inputSelector</th>
 			<td>.form-input</td>
-			<td>Choisi l'élément sur lequel les classes seront appliquées.</td>
+			<td>string</td>
+			<td>Define the selector to match the inputs in the form</td>
 		</tr>
 		<tr>
 			<th>classHasFocus</th>
 			<td>form-group--has-focus</td>
-			<td>Nom de la classe à ajouter pour le focus du champ.</td>
+			<td>string</td>
+			<td>The class name to be applied when focus happen on an input</td>
 		</tr>
 		<tr>
 			<th>classHasContent</th>
 			<td>form-group--has-content</td>
-			<td>Nom de la classe à ajouter lorsque le champ est rempli.</td>
+			<td>The class name to be applied when an input has some content</td>
 		</tr>
 	</tbody>
 </table>
 
-# Évolutions envisagées
+# Todo
 * ??
