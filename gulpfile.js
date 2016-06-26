@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 /**
  * Project & pathes
  */
-var project = 'jquery-modern-form',
+var project = 'modern-form',
 	path = {
 		demo: './demo',
 		css: './demo/css',
@@ -28,7 +28,7 @@ gulp.task('reload', function() {
  * Save and minify stylus files in one css file
  * Create sourcemap file
  **/
-gulp.task('stylus', function() {
+gulp.task('styles', function() {
 	return gulp.src(path.stylus + '/main.styl')
 		.pipe(plugins.plumber())
 		.pipe(plugins.sourcemaps.init())
@@ -45,7 +45,7 @@ gulp.task('stylus', function() {
  * Save and minify js files in one js file
  * Create sourcemap file
  **/
-gulp.task('javascript', function() {
+gulp.task('scripts', function() {
 	return gulp.src(path.js + '/*.js')
 		.pipe(plugins.plumber())
 		.pipe(plugins.sourcemaps.init())
@@ -59,12 +59,12 @@ gulp.task('javascript', function() {
 		.pipe(plugins.livereload());
 });
 
-gulp.task('default', ['stylus', 'javascript'], function() {
+gulp.task('default', ['styles', 'scripts'], function() {
 });
 
 gulp.task('watch', function() {
 	plugins.livereload.listen();
-	gulp.watch(path.stylus + '/*.styl', ['stylus']);
-	gulp.watch(path.js + '/*.js', ['javascript']);
+	gulp.watch(path.stylus + '/*.styl', ['styles']);
+	gulp.watch(path.js + '/*.js', ['scripts']);
 	gulp.watch('**/*.html', ['reload']);
 });

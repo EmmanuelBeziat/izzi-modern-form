@@ -2,16 +2,16 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>jQuery Modern Form</title>
+		<title>Modern Form</title>
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 
 		<div class="demo">
-			<form action="" class="form">
+			<form action="" class="form js-modern-form">
 				<div class="form-group">
 					<label for="input-name" class="form-label">Input</label>
-					<input type="text" class="form-input" id="input-name">
+					<input type="text" class="form-input" id="input-name" value="Test value">
 				</div>
 
 				<div class="form-group">
@@ -21,12 +21,9 @@
 			</form>
 		</div>
 
-		<script src="js/jquery-1.11.3.min.js"></script>
-		<script src="../dist/jquery-modern-form.min.js"></script>
+		<script src="../dist/modern-form.min.js"></script>
 		<script>
-			$(function() {
-				$('form').modernForm();
-			});
+			var myForm = new ModernForm();
 		</script>
 	</body>
 </html>
