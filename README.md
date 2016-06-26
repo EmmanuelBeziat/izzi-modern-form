@@ -1,8 +1,8 @@
 ![version](https://img.shields.io/badge/version-4.0.0-orange.svg?style=flat-square)
 
-# modern-form
+# Modern Form
 
-A simple handler for forms that add classes on your form elements, so you can play with CSS.
+A simple handler for forms that add classes on your form elements, so you can play with CSS. No jQuery required.
 
 ---
 
@@ -11,7 +11,7 @@ A simple handler for forms that add classes on your form elements, so you can pl
 Si vous utilisez Bower, vous pouvez l'installer directement
 
 ```bash
-$ bower install jquery-modern-form
+$ bower install modern-form
 ```
 
 Sinon, il vous suffit de récupérer manuellement les fichiers sur github.
