@@ -4,6 +4,8 @@
 
 A simple handler for forms that add classes on your form elements, so you can play with CSS.
 
+**Beware** : The jQuery version isn’t maintained anymore.
+
 ---
 
 #Installation
