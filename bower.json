@@ -1,23 +1,23 @@
 {
-  "name": "jQuery-ModernForm",
-  "version": "3.0.0",
-  "homepage": "https://github.com/EmmanuelBeziat/jquery-modern-form",
+  "name": "ModernForm",
+  "version": "4.0.0",
+  "homepage": "https://github.com/EmmanuelBeziat/js-modern-form",
   "repository": {
     "type": "git",
-    "url": "https://github.com/EmmanuelBeziat/jquery-modern-form"
+    "url": "https://github.com/EmmanuelBeziat/js-modern-form"
   },
   "authors": [
     "Emmanuel B. <contact@emmanuelbeziat.com>"
   ],
   "description": "A simple handler for forms that add classes on your forms, so you can play with CSS",
   "main": [
-    "dist/jquery-modern-form.min.js"
+    "dist/js-modern-form.min.js"
   ],
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "jquery",
+    "javascript",
     "form",
     "css"
   ],
@@ -31,8 +31,5 @@
     "demo",
     "src",
     "gulpfile.js"
-  ],
-  "dependencies": {
-     "jquery": "~1.11.2"
-   }
+  ]
 }

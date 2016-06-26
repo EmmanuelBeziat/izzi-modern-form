@@ -9,33 +9,34 @@
 	this.ModernForm = function() {
 		'use strict';
 
-		this.form = null;
-		this.input = null;
-		this.inputContainer = null;
-
 		var defaults = {
 			inputSelector: '.form-input',
 			classHasFocus: 'form-group--has-focus',
 			classHasContent: 'form-group--has-content'
 		};
 
-		if (arguments[0] && typeof arguments[0] === 'object') {
-			this.options = extendDefaults(defaults, arguments[0]);
-		}
+		this.form = null;
+		this.input = null;
+		this.options = extendDefaults(defaults, arguments[0]);
+	}
 
-		init.call(this);
+	ModernForm.prototype.init = function(element) {
+		this.form = element;
+		this.input = element.querySelectorAll(this.options.inputSelector);
+
+		build.call(this);
 	}
 
 	ModernForm.prototype.inputFocus = function() {
-		this.parentNode.classList.add('form-group--has-focus', 'form-group--has-content');
+		this.element.parentNode.classList.add(this.plugin.options.classHasFocus, this.plugin.options.classHasContent);
 	}
 
 	ModernForm.prototype.inputBlur = function() {
-		if ('' === this.value) {
-			this.parentNode.classList.remove('form-group--has-content');
+		if ('' === this.element.value) {
+			this.element.parentNode.classList.remove(this.plugin.options.classHasContent);
 		}
 
-		this.parentNode.classList.remove('form-group--has-focus');
+		this.element.parentNode.classList.remove(this.plugin.options.classHasFocus);
 	}
 
 	function extendDefaults(source, properties) {
@@ -50,18 +51,18 @@
 		return source;
 	}
 
-	function init() {
-		var list = [].slice.call(document.querySelectorAll('.form-input'));
+	function build() {
+		var list = [].slice.call(this.input);
 		var plugin = this;
 
 		list.forEach(function(element) {
 			if ('' !== element.value) {
-				element.parentNode.classList.add('form-group--has-content');
+				element.parentNode.classList.add(plugin.options.classHasContent);
 			}
 
 			if (element) {
-				element.addEventListener('focus', plugin.inputFocus.bind(element));
-				element.addEventListener('blur', plugin.inputBlur.bind(element));
+				element.addEventListener('focus', plugin.inputFocus.bind({element: element, plugin: plugin}));
+				element.addEventListener('blur', plugin.inputBlur.bind({element: element, plugin: plugin}));
 			}
 		});
 	}

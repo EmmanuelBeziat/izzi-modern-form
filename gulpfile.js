@@ -2,7 +2,15 @@
  * Gulp dependancies
  */
 var gulp = require('gulp'),
-	plugins = require('gulp-load-plugins')();
+	plugins = {
+		stylus: require('gulp-stylus'),
+		uglify: require('gulp-uglify'),
+		concat: require('gulp-concat'),
+		rename: require('gulp-rename'),
+		plumber: require('gulp-plumber'),
+		livereload: require('gulp-livereload'),
+		sourcemaps: require('gulp-sourcemaps')
+	}
 
 /**
  * Project & pathes
@@ -59,7 +67,7 @@ gulp.task('scripts', function() {
 		.pipe(plugins.livereload());
 });
 
-gulp.task('default', ['styles', 'scripts'], function() {
+gulp.task('build', ['styles', 'scripts'], function() {
 });
 
 gulp.task('watch', function() {

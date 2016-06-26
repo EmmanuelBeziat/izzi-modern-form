@@ -1,38 +1,35 @@
 {
-  "name": "jquery-modern-form",
-  "version": "3.0.0",
+  "name": "js-modern-form",
+  "version": "4.0.0",
   "description": "A simple handler for forms that add classes on your forms, so you can play with CSS.",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "npm i && gulp build && gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/EmmanuelBeziat/jquery-modern-form.git"
+    "url": "https://github.com/EmmanuelBeziat/js-modern-form.git"
   },
   "keywords": [
-    "jquery",
+    "javascript",
     "form",
     "css3"
   ],
   "author": "EmmanuelBeziat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EmmanuelBeziat/jquery-modern-form/issues"
+    "url": "https://github.com/EmmanuelBeziat/js-modern-form/issues"
   },
-  "homepage": "https://github.com/EmmanuelBeziat/jquery-modern-form",
+  "homepage": "https://github.com/EmmanuelBeziat/js-modern-form",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.2.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-jshint": "^1.10.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-stylus": "^2.0.1",
-    "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.4",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
     "gulp-livereload": "^3.8.1",
-    "gulp-load-plugins": "^1.1.0"
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^1.5.4"
   }
 }

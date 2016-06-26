@@ -23,7 +23,10 @@
 
 		<script src="../dist/modern-form.min.js"></script>
 		<script>
-			var myForm = new ModernForm();
+			var form = document.querySelector('.js-modern-form');
+
+			var modernForm = new ModernForm();
+			modernForm.init(form);
 		</script>
 	</body>
 </html>
