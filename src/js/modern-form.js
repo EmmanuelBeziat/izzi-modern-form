@@ -1,6 +1,6 @@
 /*!
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
- * Version : 1.0.0
+ * Version : 1.1.1
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/js-modern-form
  **/
