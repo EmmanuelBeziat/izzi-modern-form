@@ -25,7 +25,11 @@
 		<script>
 			var form = document.querySelector('.js-modern-form');
 
-			var modernForm = new ModernForm();
+			var modernForm = new ModernForm({
+				onBlur: function() {
+					console.log('onblur happened');
+				}
+			});
 			modernForm.init(form);
 		</script>
 	</body>

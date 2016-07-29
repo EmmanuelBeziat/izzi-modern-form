@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-1.0.0-orange.svg?style=flat-square)
+![version](https://img.shields.io/badge/version-1.1.1-orange.svg?style=flat-square)
 
 # Modern Form
 
@@ -67,10 +67,21 @@ modernForm.init(myForm);
 		<tr>
 			<th>classHasContent</th>
 			<td>form-group--has-content</td>
+			<td>string</td>
 			<td>The class name to be applied when an input has some content</td>
+		</tr>
+		<tr>
+			<th>onFocus</th>
+			<td>null</td>
+			<td>function</td>
+			<td>A callback function to be called when focus (entering a field) happen</td>
+		</tr>
+		<tr>
+			<th>onBlur</th>
+			<td>null</td>
+			<td>function</td>
+			<td>A callback function to be called when blur (leaving a field) happen</td>
 		</tr>
 	</tbody>
 </table>
 
-# Todo
-* Fire events callback when focus or blur happen

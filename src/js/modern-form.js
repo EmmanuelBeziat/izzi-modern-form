@@ -10,7 +10,9 @@
 		var defaults = {
 			inputSelector: '.form-input',
 			classHasFocus: 'form-group--has-focus',
-			classHasContent: 'form-group--has-content'
+			classHasContent: 'form-group--has-content',
+			onFocus: null,
+			onBlur: null
 		};
 
 		this.form = null;
@@ -31,9 +33,11 @@
 
 	/**
 	 * Add classes on the input when user gets in it
+	 * Allow callback onFocus
 	 */
 	function inputFocus() {
 		this.element.parentNode.classList.add(this.plugin.options.classHasFocus, this.plugin.options.classHasContent);
+		this.plugin.options.onFocus;
 	}
 
 	/**
@@ -43,8 +47,8 @@
 		if ('' === this.element.value) {
 			this.element.parentNode.classList.remove(this.plugin.options.classHasContent);
 		}
-
 		this.element.parentNode.classList.remove(this.plugin.options.classHasFocus);
+		this.plugin.options.onBlur;
 	}
 
 	/**
@@ -77,8 +81,8 @@
 			}
 
 			if (element) {
-				element.addEventListener('focus', plugin.inputFocus.bind({element: element, plugin: plugin})); // [2]
-				element.addEventListener('blur', plugin.inputBlur.bind({element: element, plugin: plugin})); // [2]
+				element.addEventListener('focus', inputFocus.bind({element: element, plugin: plugin})); // [2]
+				element.addEventListener('blur', inputBlur.bind({element: element, plugin: plugin})); // [2]
 			}
 		});
 	}
