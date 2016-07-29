@@ -7,8 +7,6 @@
 (function() {
 
 	this.ModernForm = function() {
-		'use strict';
-
 		var defaults = {
 			inputSelector: '.form-input',
 			classHasFocus: 'form-group--has-focus',
