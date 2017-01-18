@@ -1,36 +1,39 @@
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title>Modern Form</title>
-		<link rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
 
-		<div class="demo">
-			<form action="" class="form js-modern-form">
-				<div class="form-group">
-					<label for="input-name" class="form-label">Input</label>
-					<input type="text" class="form-input" id="input-name" value="Test value">
-				</div>
+<head>
+    <meta charset="utf-8">
+    <title>Modern Form</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
 
-				<div class="form-group">
-					<label for="input-content" class="form-label">Input</label>
-					<input type="text" class="form-input" id="input-content">
-				</div>
-			</form>
-		</div>
+<body>
 
-		<script src="../dist/modern-form.min.js"></script>
-		<script>
-			var form = document.querySelector('.js-modern-form');
+    <div class="demo">
+        <form action="" class="form js-modern-form">
+            <div class="form-group">
+                <label for="input-name" class="form-label">Input</label>
+                <input type="text" class="form-input" id="input-name" value="Test value">
+            </div>
 
-			var modernForm = new ModernForm({
-				onBlur: function() {
-					console.log('onblur happened');
-				}
-			});
-			modernForm.init(form);
-		</script>
-	</body>
+            <div class="form-group">
+                <label for="input-content" class="form-label">Input</label>
+                <input type="text" class="form-input" id="input-content">
+            </div>
+        </form>
+    </div>
+
+    <script src="../dist/modern-form.min.js"></script>
+    <script>
+        var form = document.querySelector('.js-modern-form');
+
+        var modernForm = new ModernForm({
+            onBlur: function() {
+                console.log('onblur happened');
+            }
+        });
+        modernForm.init(form);
+    </script>
+</body>
+
 </html>
