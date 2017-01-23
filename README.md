@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-2.0.0-orange.svg?style=flat-square)
+![version](https://img.shields.io/badge/version-2.0.1-orange.svg?style=flat-square)
 
 # Modern Form
 
@@ -10,7 +10,7 @@ A simple handler for forms that add classes on your form elements, so you can pl
 
 Using `npm` command, it’s as simple as this :
 ```bash
-npm i -D modern-form
+npm i js-modern-form
 ```
 
 If you use bower, you can just do
