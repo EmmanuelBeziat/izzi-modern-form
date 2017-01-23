@@ -1,0 +1,10 @@
+node_modules
+bower_components
+demo
+src
+gulpfile.js
+.DS_Store
+npm-debug.log
+.git
+.npmrc
+._*
