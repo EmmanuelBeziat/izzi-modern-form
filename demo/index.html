@@ -11,28 +11,25 @@
 
     <div class="demo">
         <form action="" class="form js-modern-form">
-            <div class="form-group">
-                <label for="input-name" class="form-label">Input</label>
-                <input type="text" class="form-input" id="input-name" value="Test value">
+            <div class="form__group">
+                <label for="input-name" class="form__label">Input</label>
+                <input type="text" class="form__input" id="input-name" value="Test value">
             </div>
 
-            <div class="form-group">
-                <label for="input-content" class="form-label">Input</label>
-                <input type="text" class="form-input" id="input-content">
+            <div class="form__group">
+                <label for="input-content" class="form__label">Input</label>
+                <input type="text" class="form__input" id="input-content">
             </div>
         </form>
     </div>
 
     <script src="../dist/modern-form.min.js"></script>
     <script>
-        var form = document.querySelector('.js-modern-form');
-
-        var modernForm = new ModernForm({
+        var modernForm = new ModernForm('.js-modern-form2', {
             onBlur: function() {
                 console.log('onblur happened');
             }
         });
-        modernForm.init(form);
     </script>
 </body>
 

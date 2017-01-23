@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-1.1.2-orange.svg?style=flat-square)
+![version](https://img.shields.io/badge/version-2.0.0-orange.svg?style=flat-square)
 
 # Modern Form
 
@@ -24,22 +24,20 @@ Or you could just download the files on GitHub.
 # How to use
 
 ```javascript
-var modernForm = new ModernForm();
-modernForm.init(myForm);
+var modernForm = new ModernForm('.js-modern-form');
 ```
 
-All you need is to define `myForm` as the main container for all a set of inputs. Check the demo files for an example.
+Check the demo files for an example.
 
 # Options
 
 You can also pass options to the plugin to change it’s default settings, like this:
 
 ```javascript
-var modernForm = new ModernForm({
+var modernForm = new ModernForm('.js-modern-form', {
 	inputSelector: '.input',
 	classHasFocus: '.has-focus'
 });
-modernForm.init(myForm);
 ```
 
 <table>
@@ -54,19 +52,19 @@ modernForm.init(myForm);
 	<tbody>
 		<tr>
 			<th>inputSelector</th>
-			<td>.form-input</td>
+			<td>.form__input</td>
 			<td>string</td>
 			<td>Define the selector to match the inputs in the form</td>
 		</tr>
 		<tr>
 			<th>classHasFocus</th>
-			<td>form-group--has-focus</td>
+			<td>form__group--has-focus</td>
 			<td>string</td>
 			<td>The class name to be applied when focus happen on an input</td>
 		</tr>
 		<tr>
 			<th>classHasContent</th>
-			<td>form-group--has-content</td>
+			<td>form__group--has-content</td>
 			<td>string</td>
 			<td>The class name to be applied when an input has some content</td>
 		</tr>

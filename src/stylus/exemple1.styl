@@ -1,4 +1,4 @@
-.form-group
+.form__group
 	position relative
 	padding 1em 0 .5em
 	box-sizing border-box
@@ -18,18 +18,18 @@
 		transform scaleX(0)
 		transition transform .3s
 
-.form-group--has-content
-	.form-label
+.form__group--has-content
+	.form__label
 		transform translateY(0) scale(.75)
 
-.form-group--has-focus
-	.form-label
+.form__group--has-focus
+	.form__label
 		color colorHighlight
 
 	&:after
 		transform scaleX(1)
 
-.form-label
+.form__label
 	position relative
 	margin 0
 	display block
@@ -39,7 +39,7 @@
 	transition transform .3s, color .3s
 	transform-origin 0 50%
 
-.form-input
+.form__input
 	position relative
 	display block
 	margin 0
