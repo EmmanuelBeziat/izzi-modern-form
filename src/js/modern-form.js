@@ -74,7 +74,8 @@
 		function inputFocus() {
 			this.element.parentNode.classList.add(self.options.classHasFocus);
 			this.element.parentNode.classList.add(self.options.classHasContent);
-			self.options.onFocus;
+
+			self.options.onFocus();
 		}
 
 		/**
@@ -85,7 +86,7 @@
 				this.element.parentNode.classList.remove(self.options.classHasContent);
 			}
 			this.element.parentNode.classList.remove(self.options.classHasFocus);
-			self.options.onBlur;
+			self.options.onBlur();
 		}
 
 		/**

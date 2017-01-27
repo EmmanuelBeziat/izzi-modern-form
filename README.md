@@ -27,6 +27,12 @@ Or you could just download the files on GitHub.
 var modernForm = new ModernForm('.js-modern-form');
 ```
 
+```html
+<form action="" class="js-modern-form">
+	<!-- your form -->
+</form>
+```
+
 You can pass either a html object, or a selector in a string.
 
 Check the demo files for an example.
