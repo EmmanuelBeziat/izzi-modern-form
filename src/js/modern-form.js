@@ -1,6 +1,6 @@
 /*!
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
- * Version : 2.0.3
+ * Version : 2.0.4
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/js-modern-form
  **/
@@ -48,10 +48,19 @@
 		 * By default, search for an item with 'js-modern-form' class
 		 */
 		if (!el) {
-			el = '.js-modern-form';
+			self.form = document.querySelector('.js-modern-form');
 		}
 
-		self.form = document.querySelector(el);
+		if (el && 'string' === typeof el) {
+			self.form = document.querySelector(el);
+		}
+		else if (el && 'object' === typeof el) {
+			self.form = el;
+		}
+		else {
+			throw new Error('[ModernForm] Unable to get a valid form');
+		}
+
 		self.input = self.form.querySelectorAll(self.options.inputSelector);
 
 		var init = function () {

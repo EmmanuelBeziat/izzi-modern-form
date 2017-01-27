@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-2.0.3-orange.svg?style=flat-square)
+![version](https://img.shields.io/badge/version-2.0.4-orange.svg?style=flat-square)
 
 # Modern Form
 
@@ -26,6 +26,8 @@ Or you could just download the files on GitHub.
 ```javascript
 var modernForm = new ModernForm('.js-modern-form');
 ```
+
+You can pass either a html object, or a selector in a string.
 
 Check the demo files for an example.
 
