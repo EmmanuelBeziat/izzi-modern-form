@@ -1,6 +1,6 @@
 /*!
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
- * Version : 2.0.5
+ * Version : 2.0.6
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/js-modern-form
  **/
@@ -75,7 +75,10 @@
 			this.element.parentNode.classList.add(self.options.classHasFocus);
 			this.element.parentNode.classList.add(self.options.classHasContent);
 
-			self.options.onFocus();
+			// callback
+			if ('function' === typeof self.options.onFocus) {
+				self.options.onFocus();
+			}
 		}
 
 		/**
@@ -86,7 +89,11 @@
 				this.element.parentNode.classList.remove(self.options.classHasContent);
 			}
 			this.element.parentNode.classList.remove(self.options.classHasFocus);
-			self.options.onBlur();
+
+			// callback
+			if ('function' === typeof self.options.onBlur) {
+				self.options.onBlur();
+			}
 		}
 
 		/**
