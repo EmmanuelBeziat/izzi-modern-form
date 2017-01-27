@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/version-2.0.4-orange.svg?style=flat-square)
+![version](https://img.shields.io/badge/version-2.0.5-orange.svg?style=flat-square)
 
 # Modern Form
 
