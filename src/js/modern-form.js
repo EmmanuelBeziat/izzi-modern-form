@@ -1,6 +1,6 @@
 /*!
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
- * Version : 2.0.6
+ * Version : 2.0.7
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/js-modern-form
  **/
@@ -61,17 +61,11 @@
 			throw new Error('[ModernForm] Unable to get a valid form');
 		}
 
-		self.input = self.form.querySelectorAll(self.options.inputSelector);
-
-		var init = function () {
-			build.call(this);
-		};
-
 		/**
 		 * Add classes on the input when user gets in it
 		 * Allow callback onFocus
 		 */
-		function inputFocus() {
+		var inputFocus = function () {
 			this.element.parentNode.classList.add(self.options.classHasFocus);
 			this.element.parentNode.classList.add(self.options.classHasContent);
 
@@ -84,7 +78,7 @@
 		/**
 		 * Remove classes on the input when user leave it
 		 */
-		function inputBlur() {
+		var inputBlur = function () {
 			if ('' === this.element.value) {
 				this.element.parentNode.classList.remove(self.options.classHasContent);
 			}
@@ -101,8 +95,8 @@
 		 * 1. Add the content class when loading, if the input's value is already defined
 		 * 2. Fire events when focus and blur happen
 		 */
-		function build() {
-			var list = [].slice.call(self.input);
+		var init = function () {
+			var list = [].slice.call(self.form.querySelectorAll(self.options.inputSelector));
 
 			list.forEach(function (element) {
 				if ('' !== element.value) {
