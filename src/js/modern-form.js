@@ -1,6 +1,6 @@
 /*!
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
- * Version : 2.0.7
+ * Version : 2.0.9
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/js-modern-form
  **/
@@ -73,7 +73,7 @@
 			if ('function' === typeof self.options.onFocus) {
 				self.options.onFocus();
 			}
-		}
+		};
 
 		/**
 		 * Remove classes on the input when user leave it
@@ -88,7 +88,7 @@
 			if ('function' === typeof self.options.onBlur) {
 				self.options.onBlur();
 			}
-		}
+		};
 
 		/**
 		 * Main build function
@@ -108,7 +108,7 @@
 					element.addEventListener('blur', inputBlur.bind({ element: element })); // [2]
 				}
 			});
-		}
+		};
 
 
 		init();
