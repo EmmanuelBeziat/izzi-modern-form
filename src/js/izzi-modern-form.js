@@ -2,7 +2,7 @@
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
  * Version : 2.0.9
  * Emmanuel B. (www.emmanuelbeziat.com)
- * https://github.com/EmmanuelBeziat/js-modern-form
+ * https://github.com/EmmanuelBeziat/izzi-modern-form
  **/
 
 (function (root, factory) {
@@ -45,10 +45,10 @@
 		}
 
 		/**
-		 * By default, search for an item with 'js-modern-form' class
+		 * By default, search for an item with 'izzi-modern-form' class
 		 */
 		if (!el) {
-			self.form = document.querySelector('.js-modern-form');
+			self.form = document.querySelector('.izzi-modern-form');
 		}
 
 		if (el && 'string' === typeof el) {

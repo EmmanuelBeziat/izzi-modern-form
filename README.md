@@ -10,7 +10,7 @@ A simple handler for forms that add classes on your form elements, so you can pl
 
 Using `npm` command, it’s as simple as this :
 ```bash
-npm i js-modern-form
+npm i izzi-modern-form
 ```
 
 If you use bower, you can just do
@@ -24,11 +24,11 @@ Or you could just download the files on GitHub.
 # How to use
 
 ```javascript
-var modernForm = new ModernForm('.js-modern-form');
+var modernForm = new ModernForm('.izzi-modern-form');
 ```
 
 ```html
-<form action="" class="js-modern-form">
+<form action="" class="izzi-modern-form">
 	<!-- your form -->
 </form>
 ```
@@ -42,7 +42,7 @@ Check the demo files for an example.
 You can also pass options to the plugin to change it’s default settings, like this:
 
 ```javascript
-var modernForm = new ModernForm('.js-modern-form', {
+var modernForm = new ModernForm('.izzi-modern-form', {
 	inputSelector: '.input',
 	classHasFocus: '.has-focus'
 });

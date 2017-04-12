@@ -1,5 +1,5 @@
 {
-  "name": "js-modern-form",
+  "name": "izzi-modern-form",
   "version": "2.0.9",
   "description": "A simple handler for forms that add classes on your forms, so you can play with CSS.",
   "main": "gulpfile.js",
@@ -7,10 +7,7 @@
     "start": "npm i && gulp build && gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/EmmanuelBeziat/js-modern-form.git"
-  },
+  "repository": "https://github.com/EmmanuelBeziat/izzi-modern-form.git",
   "keywords": [
     "javascript",
     "form",
@@ -19,9 +16,9 @@
   "author": "EmmanuelBeziat",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EmmanuelBeziat/js-modern-form/issues"
+    "url": "https://github.com/EmmanuelBeziat/izzi-modern-form/issues"
   },
-  "homepage": "https://github.com/EmmanuelBeziat/js-modern-form",
+  "homepage": "https://github.com/EmmanuelBeziat/izzi-modern-form",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",

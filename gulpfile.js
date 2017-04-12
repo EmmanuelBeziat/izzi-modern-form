@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 /**
  * Project & pathes
  */
-var project = 'modern-form',
+var project = 'izzi-modern-form',
 	path = {
 		demo: './demo',
 		css: './demo/css',
