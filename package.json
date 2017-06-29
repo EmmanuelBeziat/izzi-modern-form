@@ -2,7 +2,7 @@
   "name": "izzi-modern-form",
   "version": "2.0.9",
   "description": "A simple handler for forms that add classes on your forms, so you can play with CSS.",
-  "main": "gulpfile.js",
+  "main": "dist/izzi-modern-form.min.js",
   "scripts": {
     "start": "npm i && gulp build && gulp watch",
     "test": "echo \"Error: no test specified\" && exit 1"
