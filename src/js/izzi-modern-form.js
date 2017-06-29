@@ -1,6 +1,6 @@
 /*!
  * A simple handler for forms that add classes on your forms, so you can play with CSS.
- * Version : 2.0.9
+ * Version : 2.0.10
  * Emmanuel B. (www.emmanuelbeziat.com)
  * https://github.com/EmmanuelBeziat/izzi-modern-form
  **/
