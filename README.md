@@ -19,7 +19,7 @@ If you use bower, you can just do
 $ bower i modern-form
 ```
 
-Or you could just download the files on GitHub.
+Or you can just download the files.
 
 # How to use
 
@@ -44,7 +44,7 @@ You can also pass options to the plugin to change it’s default settings, like 
 ```javascript
 var modernForm = new ModernForm('.izzi-modern-form', {
 	inputSelector: '.input',
-	classHasFocus: '.has-focus'
+	classHasFocus: 'has-focus'
 });
 ```
 
